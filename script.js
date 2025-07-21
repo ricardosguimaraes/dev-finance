@@ -153,7 +153,7 @@ const Form = {
         return { description, amount, date }
     },
 
-    clearFileds(){
+    clearFields(){
         Form.description.value = ""
         Form.amount.value = ""
         Form.date.value = ""
@@ -166,7 +166,7 @@ const Form = {
             Form.validateFields()
             const transaction = Form.formatValues()
             Transaction.add(transaction)
-            Form.clearFileds()
+            Form.clearFields()
             Modal.close()
         } catch (error) {
             alert(error.message)
