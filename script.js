@@ -96,9 +96,9 @@ const DOM = {
 const Utils = {
     
     formatAmount(value) {
-        value = Number(value) * 100 
-        console.log(value)
-        return value;
+        value = String(value).replace(',', '.');
+        value = Number(value) * 100;
+        return Math.round(value);
     },
 
     formatDate(date) {
